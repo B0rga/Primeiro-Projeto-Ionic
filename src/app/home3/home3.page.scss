@@ -1,0 +1,11 @@
+h1{
+  margin-left: 16px;
+}
+
+ion-button{
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 10%;
+}

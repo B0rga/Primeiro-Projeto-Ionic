@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color = "dark">
+    <ion-title>
+      Home
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-button expand="block" (click)="btnAcessar()">
+    Acessar Home2
+  </ion-button>
+
+  <h3>Linguagens de programação:</h3>
+
+    <ion-item lines="full">{{linguagem[0]}}</ion-item>
+    <ion-item lines="full">{{linguagem[1]}}</ion-item>
+    <ion-item lines="full">{{linguagem[2]}}</ion-item>
+
+  <h3>Hardwares:</h3>
+  <!--Abaixo eu pego os itens do array "hardwares" e os exibo um por um.
+    Por isso "let hardware (singular) of hardwares (nome do array que por sua vez está escrito no plural,
+    o que dá a ideia de conjunto)"-->
+  <ion-item lines="full" id="itemHardware" *ngFor="let hardware of hardwares; let i = index" (click)="itemClicked(hardware, i)">
+      {{hardware.Nome}}
+  </ion-item>
+
+</ion-content>
+
+<!--<ion-footer>
+  Por Pedro Borges
+</ion-footer>-->
+
+

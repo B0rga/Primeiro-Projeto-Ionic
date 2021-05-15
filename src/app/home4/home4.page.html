@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-toolbar color="dark">
+
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Home4</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list>
+    <ion-item lines="full">
+      <ion-label position="floating">Nome: </ion-label>
+      <ion-input type="text" [(ngModel)]="nome" required></ion-input>
+      <!-- type ="text" type ="password" type ="number" type ="tel" type ="email" -->
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label>Sexo</ion-label>
+        <ion-select placeholder="Selecione" [(ngModel)]="sexo">
+          <ion-select-option value="Masculino">Masculino</ion-select-option>
+          <ion-select-option value="Feminino">Feminino</ion-select-option>
+        </ion-select>
+    </ion-item>
+
+    <!--<ion select multiple="true">-->
+
+    <ion-item lines="full">
+      <ion-label>Residência</ion-label>
+        <ion-select placeholder="Selecione" interface="popover" [(ngModel)]="residencia">
+          <ion-select-option value="Casa">Casa</ion-select-option>
+          <ion-select-option value="Apartamento">Apartamento</ion-select-option>
+        </ion-select>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label>Animal doméstico</ion-label>
+        <ion-select placeholder="Selecione" value="notifications" interface="action-sheet" [(ngModel)]="animal">
+          <ion-select-option value = "Cachorro">Cachorro</ion-select-option>
+          <ion-select-option value = "Gato">Gato</ion-select-option>
+          <ion-select-option value = "Papagaio">Papagaio</ion-select-option>
+        </ion-select>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-label>Data de nascimento</ion-label>
+        <ion-select placeholder="Selecione" ok-text="Sim" cancel-text="Não" [(ngModel)]="ano">
+          <ion-select-option value = "2000">2000</ion-select-option>
+          <ion-select-option value = "1999">1999</ion-select-option>
+          <ion-select-option value = "1998">1998</ion-select-option>
+          <ion-select-option value = "1997">1997</ion-select-option>
+          <ion-select-option value = "1996">1996</ion-select-option>
+          <ion-select-option value = "1995">1995</ion-select-option>
+          <ion-select-option value = "1994">1994</ion-select-option>
+          <ion-select-option value = "1993">1993</ion-select-option>
+          <ion-select-option value = "1992">1992</ion-select-option>
+          <ion-select-option value = "1991">1991</ion-select-option>
+          <ion-select-option value = "1990">1990</ion-select-option>
+        </ion-select>
+    </ion-item>
+  </ion-list>
+
+  <ion-button (click)=btnEnviar()>Enviar</ion-button><br>
+
+  <!--<div>
+    <ion-label>Sexo:&nbsp;</ion-label>
+    <ion-label id="infos">{{sexo_show}}</ion-label><br>
+
+    <ion-label>Residência:&nbsp;</ion-label>
+    <ion-label id="infos">{{residencia_show}}</ion-label><br>
+
+    <ion-label>Pet:&nbsp;</ion-label>
+    <ion-label id="infos">{{animal_show}}</ion-label><br>
+
+    <ion-label>Nascimento:&nbsp;</ion-label>
+    <ion-label id="infos">{{ano_show}}</ion-label><br>
+  </div>-->
+</ion-content>

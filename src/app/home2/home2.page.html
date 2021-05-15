@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar color = "dark">
+
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>
+      Home2
+    </ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="btnHelp()">
+        <ion-icon slot="icon-only" name="help-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+  <!-- <ion-button (click)="btnVoltar()">Retornar a Home</ion-button> -->
+  <ion-button expand="block" (click)="btnAcessar()">Acessar Home3</ion-button><br>
+
+  <div class= "ion-margin-bottom">
+    <ion-label>Qual o carro mais potente do mundo?</ion-label>
+  </div>
+
+  <ion-radio-group [(ngModel)]="value_selected" (ionChange)="itemChange()">
+    <ion-item lines="full">
+      <ion-radio value="Monza"></ion-radio>
+      <ion-label>&nbsp;Monza</ion-label> <!-- &nbsp; é um espaçamento -->
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-radio value="Gol"></ion-radio>
+      <ion-label>&nbsp;Gol</ion-label>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-radio value="Palio"></ion-radio>
+      <ion-label>&nbsp;Palio</ion-label>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-radio value="Celta"></ion-radio>
+      <ion-label>&nbsp;Celta</ion-label>
+    </ion-item>
+  </ion-radio-group>
+
+  <h2>Resposta: {{value_selected}}</h2>
+  <h2>{{result}}</h2>
+
+</ion-content>

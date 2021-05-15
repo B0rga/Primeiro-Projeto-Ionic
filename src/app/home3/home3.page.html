@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar color = "dark">
+
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+    <ion-title>Home3</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!--<p>
+    {{data}}
+  </p><br> -->
+  <h1>Família:</h1>
+  <ion-list>
+  <ion-item lines="full">{{data.Pai}}</ion-item>
+  <ion-item lines="full">{{data.Mae}}</ion-item>
+  <ion-item lines="full">{{data.Irma}}</ion-item>
+  </ion-list>
+
+  <ion-button (click)="btnAcessar()">Acessar Home4</ion-button>
+</ion-content>
